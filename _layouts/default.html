@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include head.html %}
-  <body class="<%= page_classes %>">
+  <body>
+    {% include header.html %}
     {{ content }}
     {% include footer.html %}
     <div id="background">&nbsp;</div>

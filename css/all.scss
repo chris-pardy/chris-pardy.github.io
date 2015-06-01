@@ -1,3 +1,5 @@
+---
+---
 footer {
   background-color: white;
   text-align: center;
@@ -19,4 +21,7 @@ ul.social {
   z-index:-1;
   background:white center center no-repeat;
   background-size:cover;
+}
+.navbar-toggle img {
+  height:40px;
 }

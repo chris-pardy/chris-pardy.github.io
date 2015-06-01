@@ -10,3 +10,4 @@ url: "http://www.gabriellachris.com" # the base hostname & protocol for your sit
 
 # Build settings
 markdown: kramdown
+exclude: [.gitignore, LICENSE, README.md]

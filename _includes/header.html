@@ -1,0 +1,22 @@
+<header>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<img src="/images/ring_profile.png" alt="Ring" />
+				</button>
+				<a class="navbar-brand" href="/">Gabriella &amp; Chris</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				{% for p in site.pages %}
+					{% if p.title %}
+					<li{% if p == page %} class="active"{% endif %}><a href="{{ p.url }}">{{ p.title }}</a></li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+			</div>
+		</div>
+	</nav>
+</header>
