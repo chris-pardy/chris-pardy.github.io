@@ -1,0 +1,55 @@
+---
+layout: default
+sections:
+  -
+    name: About Us
+    content: about_us.html
+  -
+    name: Gallery
+    content: gallery.html
+  -
+    name: Bridal Party
+    content: bridal_party.html
+  -
+    name: Festivities
+    content: festivities.html
+  -
+    name: Location
+    content: location.html
+    before: italy
+  -
+    name: Registry
+    content: registry.html
+---
+<header>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<img src="/images/ring_profile.png" alt="Ring" />
+				</button>
+				<a class="navbar-brand" href="/">Gabriella &amp; Chris</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				{% for item in page.sections %}
+					<li><a href="">{{ item.name }}</a></li>
+				{% endfor %}
+			</ul>
+			</div>
+		</div>
+	</nav>
+</header>
+{{ content }}
+{% for item in page.sections %}
+{% if item.before %}
+<div class="container cutin">
+	{% include cutins.html cutin=item.before %}
+</div>
+{% endif %}
+<div class="container-fluid section">
+<h1>{{ item.name }}</h1>
+{% include {{item.content}} %}
+</div>
+{% endfor %}
