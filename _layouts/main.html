@@ -3,23 +3,17 @@ layout: default
 sections:
   -
     name: About Us
+    id: about
     content: about_us.html
   -
     name: Gallery
+    id: gallery
     content: gallery.html
   -
-    name: Bridal Party
-    content: bridal_party.html
-  -
-    name: Festivities
-    content: festivities.html
-  -
     name: Location
+    id: location
     content: location.html
     before: italy
-  -
-    name: Registry
-    content: registry.html
 ---
 <header>
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -34,7 +28,7 @@ sections:
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				{% for item in page.sections %}
-					<li><a href="">{{ item.name }}</a></li>
+					<li><a href="#{{ item.id }}">{{ item.name }}</a></li>
 				{% endfor %}
 			</ul>
 			</div>
@@ -48,8 +42,10 @@ sections:
 	{% include cutins.html cutin=item.before %}
 </div>
 {% endif %}
-<div class="container-fluid section">
+<section>
+<div class="container-fluid section" id="{{ item.id }}">
 <h1>{{ item.name }}</h1>
 {% include {{item.content}} %}
 </div>
+</section>
 {% endfor %}
