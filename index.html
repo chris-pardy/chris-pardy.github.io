@@ -1,11 +1,60 @@
 ---
-layout: main
-styles:
-  - /css/home.css
+layout: default
+sections:
+  -
+    name: About Us
+    id: about
+    content: about_us.html
+  -
+    name: Gallery
+    id: gallery
+    content: gallery.html
+  -
+    name: Bridal Party
+    id: bridal
+    content: bridal_party.html
+  -
+    name: Ravello
+    id: ravello
+    content: location.html
+    before: ravello
 ---
-<div class="jumbotron">
-  <div class="container">
-    <h1>Gabriella &amp; Chris</h1>
-    <h2>July 13th 2016</h2>
-  </div>
+<header>
+	<nav class="navbar-fixed-top collapse">
+		<div class="container">
+			<ul class="row">
+				{% for item in page.sections %}
+					<li><a href="#{{ item.id }}">{{ item.name }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+	</nav>
+</header>
+<div class="container landing">
+	<div class="row">
+		<div class="col-sm-8 col-xs-10 col-sm-offset-2 col-xs-offset-1 strike">
+			<time datetime="2016-07-13" class="text">July • 13 • 2016</time>
+		</div>
+	</div>
+	<div class="row">
+		<h1>Gabriella <em>&amp;</em> Christopher</h1>
+	</div>
+	<div class="row">
+		<div class="col-sm-8 col-xs-10 col-sm-offset-2 col-xs-offset-1 strike">
+			<span class="text">Ravello, Italia</span>
+		</div>
+	</div>
 </div>
+{% for item in page.sections %}
+{% if item.before %}
+<div class="container cutin">
+	{% include cutins.html cutin=item.before %}
+</div>
+{% endif %}
+<section>
+<div class="container-fluid section" id="{{ item.id }}">
+<h1>{{ item.name }}</h1>
+{% include {{item.content}} %}
+</div>
+</section>
+{% endfor %}

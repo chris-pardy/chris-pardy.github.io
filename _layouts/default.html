@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include head.html %}
-  <body>
+  <body data-spy="scroll" data-target="#bs-navbar-collapse">
     {{ content }}
     {% include footer.html %}
     <div id="background">&nbsp;</div>
     <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script type="application/javascript">
+    	$(document).ready(function(){
+    		$('nav li a').click(function(e){
+	    		$('html, body').animate({
+	    			scrollTop: $($(this).attr('href')).offset().top
+	    		}, 1000);
+	    		e.stopImmediatePropagation();
+	    		return true;
+	    	});
+	    	var toggleNav = function(){
+	    		var s = $(window).scrollTop();
+	    		if (s > 200){
+	    			$('nav').collapse('show');
+	    		} else if (s < 190) {
+	    			$('nav').collapse('hide');
+	    		}
+	    	};
+	    	var resizeLanding = function(){
+	    		$('.landing').height($(window).height());
+	    	};
+	    	$(window).scroll(function(){
+	    		toggleNav();
+	    	});
+	    	$(window).resize(function(){
+	    		resizeLanding();
+	    	});
+	    	toggleNav();
+	    	resizeLanding();
+    	});
+    </script>
   </body>
 </html>
