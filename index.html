@@ -44,6 +44,11 @@ sections:
 			<span class="text">Ravello, Italia</span>
 		</div>
 	</div>
+	<div class="row down">
+		<button class="btn-lg" data-scroll-to="#about">
+			<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+		</button>
+	</div>
 </div>
 {% for item in page.sections %}
 {% if item.before %}
@@ -52,8 +57,7 @@ sections:
 </div>
 {% endif %}
 <section>
-<div class="container-fluid section" id="{{ item.id }}">
-<h1>{{ item.name }}</h1>
+<div class="container-fluid" id="{{ item.id }}">
 {% include {{item.content}} %}
 </div>
 </section>

@@ -16,6 +16,11 @@
 	    		e.stopImmediatePropagation();
 	    		return true;
 	    	});
+	    	$('[data-scroll-to]').click(function(){
+	    		$('html, body').animate({
+	    			scrollTop: $($(this).data('scroll-to')).offset().top
+	    		}, 1000);
+	    	});
 	    	var toggleNav = function(){
 	    		var s = $(window).scrollTop();
 	    		if (s > 200){
@@ -33,6 +38,10 @@
 	    	$(window).resize(function(){
 	    		resizeLanding();
 	    	});
+	    	$('#groomsman-carousel').on('slide.bs.carousel', function (e) {
+	    		$(this).find('.carousel-image').removeClass('active');
+	    		$(this).find('[data-slide-to='+$(e.relatedTarget).index()+']').addClass('active');
+			});
 	    	toggleNav();
 	    	resizeLanding();
     	});

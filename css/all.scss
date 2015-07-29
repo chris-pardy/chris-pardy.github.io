@@ -89,6 +89,14 @@ h1 {
       left: 100%;
       margin-left: 20px;
   }
+  .down.row{
+    margin-top: 50px;
+    button {
+      border:none;
+      background: transparent;
+      outline: none;
+    }
+  }
 }
 
 nav {
@@ -116,7 +124,7 @@ nav {
   }
 }
 
-.section {
+section {
   background-color: $primary-color;
   h1 {
     text-align: center;
@@ -145,17 +153,47 @@ nav {
 }
 
 .bridal-party {
+  padding-bottom: 20px;
+  small {
+    display: block;
+  }
   .left{
-    h1 {
-      text-align: right;
-      padding-right: 1em;
+    @media(min-width: 768px){
+      h1 {
+        text-align: right;
+        margin-right: 5%;
+      }
     }
-    border-right: 1px solid black;
   }
   .right {
-    h1 {
-      text-align: left;
+    @media(min-width: 768px){
+      h1 {
+        text-align: left;
+        margin-left: 5%;
+      }
+      border-left:1px solid black;
+    }
+  }
+  .carousel{
+    margin-left: 5%;
+    margin-right: 5%;
+    .carousel-header{
+      text-align: center;
+      img.carousel-image{
+        max-width: 150px;
+        width: 90%;
+        opacity: 0.3;
+      }
+      img.carousel-image:hover{
+          opacity: 0.6;
+      }
+      img.carousel-image.active{
+        opacity: 1;
+      }
+    }
+    .carousel-inner .item {
       padding-left: 1em;
+      padding-right: 1em;
     }
   }
 }
