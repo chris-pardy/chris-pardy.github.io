@@ -3,7 +3,7 @@ $(document).ready(function(){
     		var target = $(this).data('scroll-to') || $(this).attr('href');
             if (target){
         		$('html, body').animate({
-        			scrollTop: $(target).offset().top
+        			scrollTop: $(target).offset().top - 22
         		}, 1000);
         		e.stopImmediatePropagation();
         		return true;
@@ -12,9 +12,9 @@ $(document).ready(function(){
     	});
     	var toggleNav = function(){
     		var s = $(window).scrollTop();
-    		if (s > 200){
+    		if (s > 600){
     			$('nav').collapse('show');
-    		} else if (s < 190) {
+    		} else if (s < 400) {
     			$('nav').collapse('hide');
     		}
     	};
@@ -25,6 +25,16 @@ $(document).ready(function(){
     		$(this).find('.carousel-image').removeClass('active');
     		$(this).find('[data-slide-to='+$(e.relatedTarget).index()+']').addClass('active');
 		});
+        $('#toggle-map').change(function(){
+            if (this.checked){
+                $('#location-map').css('z-index','10');
+            }
+        });
+        $('#toggle-info').change(function(){
+            if (this.checked){
+                $('#location-map').css('z-index','0');
+            }
+        })
         +function(){
             var updateDaysToGo = function(){
                 var now = new Date();

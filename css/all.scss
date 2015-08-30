@@ -13,13 +13,20 @@ footer {
   background-color: $primary-color;
   text-align: center;
   padding: 10px 0 0 0;
-}
-
-ul.social {
-  list-style: none;
-  li {
-    display: inline-block;
-    padding:0 1em 0 1em;
+  ul.social {
+    list-style: none;
+    li {
+      display: inline-block;
+      padding:0 2em 0 2em;
+    }
+  }
+  a.lsf {
+    text-decoration: none;
+    font-size: 3em;
+    color: $grey-color;
+  }
+  a.lsf:hover {
+    color: $accent-color;
   }
 }
 
@@ -76,8 +83,10 @@ h1 {
       left: 100%;
       margin-left: 20px;
   }
-  .down.row{
-    margin-top: 50px;
+  .down{
+    position: absolute;
+    top: 90vh;
+    width: 100%;
   }
   button {
     border:none;
@@ -87,8 +96,10 @@ h1 {
 }
 
 nav {
-  background-color: rgba(255,255,255,0.25);
+  background-color: $primary-color;
   text-align: center;
+  border-bottom: 1px solid $grey-color;
+  color: $grey-color;
   ul {
     width: 100%;
     margin: 0 auto;
@@ -97,20 +108,26 @@ nav {
       display: inline-block;
       margin-left:1em;
       margin-right:1em;
+      font-size: large;
       a {
-        color: black;
+        color: $grey-color;
       }
       a:visited {
-        color: black;
+        color: $grey-color;
         text-decoration: none;
       }
     }
-    li:hover {
-        background-color: $primary-color;
-        a {
-          text-decoration: none;
-          color: black;
-        }
+    li.spacer {
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 0;
+      margin-right: 0;
+      font-weight: bold;
+      font-family: sans;
+    }
+    li:hover a {
+      text-decoration: none;
+      color: black;
     }
   }
   #rsvp {
@@ -120,6 +137,23 @@ nav {
 
 #count-down {
   text-align: center;
+  background-color: $accent-color;
+  font-size: 2em;
+  border-top: 1px solid $grey-color;
+  border-bottom: 1px solid $grey-color;
+  margin-bottom: 1em;
+  line-height: 1.1;
+  .col-xs-2, .col-xs-8 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .border-left {
+    border-left: 1px solid $grey-color;
+  }
+  .title {
+    background-color: $grey-color;
+    height: 100%;
+  }
 }
 
 section {
@@ -133,20 +167,21 @@ section {
   padding-top: 5em;
   padding-bottom: 5em;
   min-height: 5em;
-  figure {
-    background-color: rgba(255,255,255,.5);
+  .quote {
+    background-color: white;
+    border-top: 10px solid $accent-color;
     hr {
       width: 10%;
       border-color: black;
     }
+    .author {
+      text-align: center;
+    }
   }
   h1 {
-    font-family: serif;
+    font-family: 'Josefin Slab', serif;
     text-align: center;
     font-size: medium;
-  }
-  figcaption {
-    text-align: center;
   }
 }
 
@@ -194,4 +229,8 @@ section {
       padding-right: 1em;
     }
   }
+}
+
+#festive-carousel {
+  border: 1px solid $grey-color;
 }
