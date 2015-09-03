@@ -5,6 +5,9 @@ $(document).ready(function(){
         		$('html, body').animate({
         			scrollTop: $(target).offset().top - 22
         		}, 1000);
+                if ($(this).attr('href')){
+                    animateNav(this);
+                }
         		e.stopImmediatePropagation();
         		return true;
             }
@@ -18,8 +21,56 @@ $(document).ready(function(){
     			$('nav').collapse('hide');
     		}
     	};
+        var animateNav = function(target) {
+            if (target && !$(target).hasClass('active')) {
+                $('nav li a.active').animate({
+                    paddingBottom: 10
+                }, {
+                    duration: 600,
+                    easing: "linear",
+                    done: function(){
+                        $(this).css({borderBottomWidth:0});
+                    }
+                }).removeClass('active');
+                $(target).animate({
+                    paddingBottom: 0
+                }, {
+                    duration: 600,
+                    easing: "linear",
+                    start: function(){
+                        $(this).css({borderBottomWidth:1});
+                    }
+                }).addClass('active');
+            }
+        };
+        var navSpy = function(){
+            var watchNav = function(winTop){
+                var windowTop = $(window).scrollTop();
+                if (winTop != windowTop){
+                    return;
+                }
+                var windowBottom = windowTop + $(window).height();
+                var t;
+                var p = 0;
+                $('nav a[href^="#"]').each(function(){
+                    var target = $(this).attr('href');
+                    var top = $(target).offset().top;
+                    var bottom = top + $(target).height();
+                    var size = Math.min(windowBottom,bottom) - Math.max(windowTop, top);
+                    if (size > p) {
+                        t = this;
+                        p = size;
+                    }
+                });
+                animateNav(t);
+            };
+            var winTop = $(window).scrollTop();
+            setTimeout(function(){watchNav(winTop);},80);
+            
+        };
     	$(window).scroll(function(){
     		toggleNav();
+            navSpy();
     	});
     	$('#groomsman-carousel').on('slide.bs.carousel', function (e) {
     		$(this).find('.carousel-image').removeClass('active');
@@ -57,3 +108,4 @@ $(document).ready(function(){
             updateDaysToGo();
         }();
 	});
+

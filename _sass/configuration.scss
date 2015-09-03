@@ -34,3 +34,18 @@ $grey-color: rgb(131,149,161);
   margin-right:0.3em;
   font-size:130%;
 }
+
+
+
+@font-face {
+    font-family: 'mr_sheffieldregular';
+    src: url('/fonts/mr_sheffield-webfont.eot');
+    src: url('/fonts/mr_sheffield-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/mr_sheffield-webfont.woff2') format('woff2'),
+         url('/fonts/mr_sheffield-webfont.woff') format('woff'),
+         url('/fonts/mr_sheffield-webfont.ttf') format('truetype'),
+         url('/fonts/mr_sheffield-webfont.svg#mr_sheffieldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

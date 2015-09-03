@@ -4,9 +4,20 @@
 @import url(http://fonts.googleapis.com/css?family=Josefin+Slab);
 @import 'configuration';
 
+#stamp {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  z-index: 255;
+  opacity: .8;
+}
+
 body {
   position: relative;
   font-family: 'Josefin Slab', serif;
+  font-size: 1.6em;
+  background-image: url('/images/dark_grey_2.png');
+  color: white;
 }
 
 footer {
@@ -31,7 +42,7 @@ footer {
 }
 
 h1 {
-  font-family: 'Allura', cursive;
+  font-family: 'mr_sheffieldregular', cursive;
 }
 
 .landing {
@@ -111,6 +122,11 @@ nav {
       font-size: large;
       a {
         color: $grey-color;
+        border-bottom-width: 0px;
+        border-bottom-style: solid;
+        border-bottom-color: $grey-color;
+        padding-bottom: 10px;
+        margin-bottom: 0;
       }
       a:visited {
         color: $grey-color;
@@ -128,6 +144,8 @@ nav {
     li:hover a {
       text-decoration: none;
       color: black;
+      border-bottom-color: black;
+      font-weight: bold;
     }
   }
   #rsvp {
@@ -137,11 +155,10 @@ nav {
 
 #count-down {
   text-align: center;
-  background-color: $accent-color;
-  font-size: 2em;
-  border-top: 1px solid $grey-color;
-  border-bottom: 1px solid $grey-color;
-  margin-bottom: 1em;
+  background-image: url('/images/orangebg.png');
+  font-size: 1.6em;
+  color: white;
+  margin-bottom: 5em;
   line-height: 1.1;
   .col-xs-2, .col-xs-8 {
     padding-top: 1em;
@@ -151,13 +168,17 @@ nav {
     border-left: 1px solid $grey-color;
   }
   .title {
-    background-color: $grey-color;
-    height: 100%;
+    background-image: url('/images/dark_grey_2.png');
+    font-family: 'mr_sheffieldregular', cursive;
+    font-size: 1.5em;
+    color: white;
+    line-height: 2.1em;
+    padding-top: .7em;
   }
 }
 
 section {
-  background-color: $primary-color;
+  padding-top:2em;
   h1 {
     text-align: center;
   }
@@ -182,6 +203,16 @@ section {
     font-family: 'Josefin Slab', serif;
     text-align: center;
     font-size: medium;
+  }
+}
+
+#about {
+  h3 small{
+    font-size:1.5em;
+    font-family:'mr_sheffieldregular', cursive;
+  }
+  ul{
+    list-style: none;
   }
 }
 
