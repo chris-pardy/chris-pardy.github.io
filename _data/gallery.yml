@@ -1,0 +1,79 @@
+- src: /images/gallery/1.jpg
+  orient: hor
+  offset: 10
+  caption: Vinyard
+
+- src: /images/gallery/2.jpg
+  orient: ver
+  caption: Rome
+
+- src: /images/gallery/3.jpg
+  orient: hor
+  offset: 30
+  caption: Largo di Garda
+
+- src: /images/gallery/4.jpg
+  orient: ver
+  offset: 50
+  caption: 
+
+- src: /images/gallery/5.jpg
+  orient: hor
+  caption:
+
+- src: /images/gallery/6.jpg
+  orient: ver
+  offset: 20
+  caption:
+
+- src: /images/gallery/7.jpg
+  orient: hor
+  caption:
+
+- src: /images/gallery/8.jpg
+  orient: hor
+  caption:
+
+- src: /images/gallery/9.jpg
+  orient: ver
+  caption:
+
+- src: /images/gallery/10.jpg
+  orient: hor
+  caption:
+
+- src: /images/gallery/11.jpg
+  orient: hor
+  caption:
+
+- src: /images/gallery/12.jpg
+  orient: hor
+  offset: 50
+  caption:
+
+- src: /images/gallery/13.jpg
+  orient: hor
+  offset: 50
+  caption:
+
+- src: /images/gallery/14.jpg
+  orient: hor
+  caption:
+
+- src: /images/gallery/15.jpg
+  orient: ver
+  caption:
+
+- src: /images/gallery/16.jpg
+  orient: hor
+  offset: 30
+  caption:
+
+- src: /images/gallery/17.jpg
+  orient: hor
+  offset: 50
+  caption:
+
+- src: /images/gallery/18.jpg
+  orient: ver
+  caption:

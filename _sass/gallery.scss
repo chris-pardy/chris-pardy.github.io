@@ -1,0 +1,48 @@
+@mixin filter($filter-vals){
+  filter: $filter-vals;
+  -webkit-filter: $filter-vals;
+}
+
+@mixin filter-transition($time){
+  transition: filter $time;
+  -webkit-transition: -webkit-filter $time;
+}
+
+#gallery {
+  ul {
+    background-color: $grey-color;
+    list-style: none;
+    height: 100%;
+    overflow-y: hidden;
+    padding: 0;
+    li {
+      float: left;
+      position: relative;
+      padding: 0;
+      .image {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        z-index: 10;
+        cursor: pointer;
+        img {
+          @include filter(saturate(30%) brightness(50%));
+          @include filter-transition(0.4s);
+        }
+        img.active {
+          @include filter(saturate(100%) brightness(100%));
+        }
+      }
+      .image.hor img {
+        height: 100%;
+      }
+      .image.ver img {
+        width: 100%;
+      }
+    }
+  }
+}

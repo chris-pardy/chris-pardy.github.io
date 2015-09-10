@@ -1,0 +1,30 @@
+#events {
+  background-color: white;
+  color: $grey-color;
+  padding-bottom: 3em;
+  .carousel-inner {
+    border: 1px solid $grey-color;
+    height: 200px; 
+    overflow: scroll;
+  }
+  .control {
+    cursor: pointer;
+    .indicator {
+      display: block;
+      margin-top: -.35em;
+      border: 2px solid $grey-color;
+      height: 15px;
+      width: 15px;
+      margin-left: 50%;
+      border-radius: 50%;
+      background-color: white;
+      //background-image: url('/images/slate_blue.jpg');
+    }
+  }
+  .control.active {
+    .indicator {
+      background-image: none;
+      background-color: $grey-color;
+    }
+  }
+}

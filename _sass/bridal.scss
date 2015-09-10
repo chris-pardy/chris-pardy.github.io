@@ -1,0 +1,55 @@
+#bridal {
+  padding-bottom: 20px;
+  small {
+    display: block;
+  }
+  .left-align{
+    @media(min-width: 768px){
+      h1 {
+        text-align: right;
+        margin-right: 5%;
+      }
+      h2 {
+        text-align: right;
+      }
+      p {
+        text-align: right;
+      }
+    }
+  }
+  .right-align {
+    @media(min-width: 768px){
+      h1 {
+        text-align: left;
+        margin-left: 5%;
+      }
+      h2 {
+        text-align: left;
+      }
+      p {
+        text-align: left;
+      }
+      border-left:2px solid $grey-color;
+    }
+  }
+  .carousel{
+    margin-left: 5%;
+    margin-right: 5%;
+    .carousel-header{
+      text-align: center;
+      img.carousel-image{
+        max-width: 150px;
+        width: 90%;
+        opacity: 0.3;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      img.carousel-image:hover{
+          opacity: 0.6;
+      }
+      img.carousel-image.active{
+        opacity: 1;
+      }
+    }
+  }
+}
