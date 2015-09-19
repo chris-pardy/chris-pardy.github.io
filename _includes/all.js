@@ -16,9 +16,8 @@ $(document).ready(function(){
                     dontAnimate = false;
                 }
             });
-            if ($(this).attr('href')){
-                animateNav(this);
-            }
+            var navItem = $('nav li a[href='+target+']');
+            animateNav(navItem);
     		e.stopImmediatePropagation();
     		return true;
         }
@@ -39,7 +38,7 @@ $(document).ready(function(){
             $('nav li a.active').animate({
                 paddingBottom: 10
             }, {
-                duration: 600,
+                duration: 400,
                 easing: "linear",
                 done: function(){
                     $(this).css({borderBottomWidth:0});
@@ -48,7 +47,7 @@ $(document).ready(function(){
             $(target).animate({
                 paddingBottom: 0
             }, {
-                duration: 600,
+                duration: 400,
                 easing: "linear",
                 start: function(){
                     $(this).css({borderBottomWidth:1});

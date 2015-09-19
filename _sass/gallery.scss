@@ -9,12 +9,14 @@
 }
 
 #gallery {
+  padding-bottom: 0;
   ul {
     background-color: $grey-color;
     list-style: none;
     height: 100%;
     overflow-y: hidden;
     padding: 0;
+    margin-bottom: 0;
     li {
       float: left;
       position: relative;

@@ -1,5 +1,7 @@
 #bridal {
+  background-color: white;
   padding-bottom: 20px;
+  color: $grey-color;
   small {
     display: block;
   }
@@ -29,6 +31,10 @@
       p {
         text-align: left;
       }
+    }
+  }
+  .right-align.col-sm-6 {
+    @media(min-width: 768px){
       border-left:2px solid $grey-color;
     }
   }

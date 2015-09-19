@@ -20,6 +20,10 @@ sections:
     before: festivities
     background: /images/capri.jpg
   -
+    name: Travel
+    id: travel
+    content: travel.html
+  -
     name: Ravello
     id: ravello
     content: location.html
@@ -47,7 +51,7 @@ sections:
 	</nav>
 </header>
 <div class="container-fluid" data-parallax="scroll" data-image-src="/images/capri.jpg" data-speed="0.0">
-	<div class="row landing" data-parallax="scroll" data-image-src="/images/capri.jpg" data-speed="0.0">
+	<div class="row landing">
 		<div class="row">
 			<div class="col-sm-8 col-xs-10 col-sm-offset-2 col-xs-offset-1 strike">
 				<time id="wedding-date" datetime="2016-07-06T16:00:00+02:00" class="text">July • 6 • 2016</time>
@@ -87,7 +91,7 @@ sections:
 </div>
 {% for item in page.sections %}
 {% if item.before %}
-<div class="container-fluid cutin" data-parallax="scroll" data-image-src="{{ item.background }}" style="background-image: url({{ item.background }});">
+<div class="container-fluid cutin" data-parallax="scroll" data-image-src="{{ item.background }}" data-speed="0.0">
 	{% include cutins.html cutin=item.before %}
 </div>
 {% endif %}
