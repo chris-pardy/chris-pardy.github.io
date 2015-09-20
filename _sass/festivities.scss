@@ -1,22 +1,5 @@
 #events {
   padding-bottom: 3em;
-  .carousel-inner {
-    border: 2px solid white;
-    height: 300px; 
-    overflow-x: hidden;
-    overflow-y: scroll;
-    h3 {
-      font-size: 20px;
-    }
-    ul {
-      list-style: none;
-    }
-    img {
-      width: 80%;
-      padding-left: 10%;
-      padding-top: 40%;
-    }
-  }
   .control {
     cursor: pointer;
     .indicator {
@@ -36,4 +19,25 @@
       background-color: white;
     }
   }
+}
+#festive-carousel {
+  .carousel-inner {
+    border: 2px solid white;
+    height: 300px; 
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+}
+.festive-content {
+  h3 {
+      font-size: 20px;
+    }
+    ul {
+      list-style: none;
+    }
+    img {
+      width: 80%;
+      padding-left: 10%;
+      padding-top: 40%;
+    }
 }
