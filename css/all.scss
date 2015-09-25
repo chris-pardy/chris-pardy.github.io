@@ -210,11 +210,12 @@ section {
   padding-bottom: 5em;
   min-height: 5em;
   .quote {
+    padding-top: .5em;
+    padding-bottom: .5em;
     background-color: white;
-    border-top: 10px solid $accent-color;
     hr {
       width: 10%;
-      border-color: black;
+      border-color: $grey-color;
     }
     .author {
       text-align: center;

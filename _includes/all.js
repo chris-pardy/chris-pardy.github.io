@@ -183,7 +183,7 @@ $(document).ready(function(){
             var w = $('#gallery ul').width();
             var images = Math.floor(w / 200);
             var imgWidth = w / images;
-            var rows = Math.floor($('#gallery li').css({
+            var rows = Math.ceil($('#gallery li').css({
                 width: imgWidth,
                 height: imgWidth
             }).length / images);
@@ -203,7 +203,7 @@ $(document).ready(function(){
     /*================================
     Bridal Party Active Image, Festivities Active Control
     ================================*/
-	$('#groomsman-carousel, #bridesmaids-carousel, #festive-carousel').on('slide.bs.carousel', function (e) {
+	$('#groomsman-carousel, #bridesmaids-carousel, #festive-carousel, #location-carousel').on('slide.bs.carousel', function (e) {
 		$(this).find('.carousel-image, .control').removeClass('active');
 		$(this).find('[data-slide-to='+$(e.relatedTarget).index()+']').addClass('active');
 	});

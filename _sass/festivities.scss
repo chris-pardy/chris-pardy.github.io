@@ -1,5 +1,8 @@
 #events {
   padding-bottom: 3em;
+  p {
+    padding-bottom: 1em;
+  }
   .control {
     cursor: pointer;
     .indicator {
@@ -24,20 +27,37 @@
   .carousel-inner {
     border: 2px solid white;
     height: 300px; 
-    overflow-x: hidden;
-    overflow-y: scroll;
+    overflow: hidden;
   }
 }
 .festive-content {
+  h2 {
+    color: rgb(81, 99, 111);
+  }
   h3 {
-      font-size: 20px;
+    font-size: 30px;
+    margin-bottom: -5px;
+    margin-top: 27px;
+    color: rgb(81, 99, 111);
+    font-family: mr_sheffieldregular, cursive;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .image {
+    overflow: hidden;
+  }
+  img {
+    height: 296px;
+  }
+  .festive-content-inner {
+    overflow-y: hidden;
+    height: 296px;
+  }
+  .festive-time {
+    time, p {
+      font-size: 16px;
     }
-    ul {
-      list-style: none;
-    }
-    img {
-      width: 80%;
-      padding-left: 10%;
-      padding-top: 40%;
-    }
+  }
 }
