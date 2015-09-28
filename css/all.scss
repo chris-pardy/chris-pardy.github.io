@@ -74,6 +74,15 @@ p {
   }
   .text {
     font-size: 2em;
+    .pip {
+      background-image: url('/images/indicator_active.png');
+      background-size: 10px;
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      vertical-align: top;
+      margin-top: .5em;
+    }
   }
   .strike {
     display: block;
@@ -180,7 +189,7 @@ nav {
     border-left: 1px solid $grey-color;
   }
   .title {
-    background-image: url('/images/orangebg3.jpg');
+    background-image: url('/images/orangebg4.jpg');
     background-size: 400px;
     font-family: 'mr_sheffieldregular', cursive;
     font-size: 1.5em;
@@ -194,6 +203,7 @@ section {
   padding-top:2em;
   padding-bottom: 2em;
   h1 {
+    margin-bottom: .3em;
     text-align: center;
     font-size: 80px;
   }
@@ -210,9 +220,18 @@ section {
   padding-bottom: 5em;
   min-height: 5em;
   .quote {
-    padding-top: .5em;
-    padding-bottom: .5em;
-    background-color: white;
+    padding: 0;
+    background-color: transparent;
+    border: 25px solid transparent;
+    -moz-border-image: url("/images/geometry-border3.png") 25 25 stretch;
+    -webkit-border-image: url("/images/geometry-border3.png") 25 25 stretch;
+    -o-border-image: url("/images/geometry-border3.png") 25 25 stretch;
+    border-image: url("/images/geometry-border3.png") 25 25 stretch;
+    .quote-inner {
+      background-color: white;
+      padding-top: .5em;
+      padding-bottom: .5em;
+    }
     hr {
       width: 10%;
       border-color: $grey-color;
@@ -228,23 +247,7 @@ section {
   }
 }
 
-#about {
-  h2 small {
-    font-size:1.5em;
-    font-family:'mr_sheffieldregular', cursive;
-  }
-  ul{
-    list-style: none;
-  }
-  .row {
-    margin-top: 1em;
-  }
-  img {
-    border: 3px solid white;
-    padding: 0;
-    border-radius: 4px;
-  }
-}
+@import 'about';
 
 @import 'gallery';
 
@@ -255,3 +258,5 @@ section {
 @import 'travel';
 
 @import 'location';
+
+@import 'registry';
