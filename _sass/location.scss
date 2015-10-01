@@ -22,6 +22,11 @@
     	padding-right: 5px;
 		float: none;
 	}
+	@media(max-width: 991px){
+	    .block-col {
+	      display: block;
+	    }
+	}
 	.block {
 		background-color: white;
 		color: $grey-color;

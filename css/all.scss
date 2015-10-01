@@ -285,6 +285,11 @@ section {
     font-size: medium;
   }
 }
+@media(max-width: 991px){
+    .cutin {
+      display: none;
+    }
+}
 
 @import 'about';
 
