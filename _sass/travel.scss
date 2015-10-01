@@ -7,4 +7,13 @@
 	.info {
 		border-bottom: 2px solid $grey-color;
 	}
+	a {
+		text-decoration: underline;
+		color: $grey-color;
+	}
+	@media(min-width: 768px){
+		img {
+			padding-top: 50%;
+		}
+	}
 }

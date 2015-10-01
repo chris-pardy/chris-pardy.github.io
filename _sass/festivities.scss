@@ -1,8 +1,4 @@
 #events {
-  padding-bottom: 3em;
-  p {
-    padding-bottom: 1em;
-  }
   .control {
     cursor: pointer;
     .indicator {
@@ -38,10 +34,6 @@
       color: rgb(81, 99, 111);
     }
   }
-  ul {
-    list-style: none;
-    padding-left: 0;
-  }
   .image {
     overflow: hidden;
     border-right: 1px solid white;
@@ -64,12 +56,20 @@
     h2 {
       margin-top: 0px;
     }
+    p {
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
   }
   .festive-time {
     time, p {
       display: block;
       font-size: 16px;
       margin-bottom: 22px;
+    }
+    p {
+      margin-bottom: 0;
+      padding-bottom: 0;
     }
   }
 }
