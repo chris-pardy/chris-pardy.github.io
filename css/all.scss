@@ -128,13 +128,15 @@ p {
 }
 
 nav {
-  background-color: $primary-color;
   text-align: center;
-  border-bottom: 1px solid $grey-color;
   color: $grey-color;
+  .container-fluid {
+    padding: 0;
+  }
   ul {
-    width: 100%;
     margin: 0 auto;
+    background-color: white;
+    border-bottom: 1px solid $grey-color;
     li {
       padding:.5em;
       display: inline-block;
@@ -167,6 +169,42 @@ nav {
       color: black;
       border-bottom-color: black;
       font-weight: bold;
+    }
+  }
+  .expand-button {
+    display: none;
+    background-color: white;
+    float: left;
+    border-bottom: 1px solid $grey-color;
+    border-right: 1px solid $grey-color;
+    padding: 5px 10px 5px 10px;
+    border-radius: 0;
+  }
+  @media(min-width: 992px){
+    ul {
+      width: 100%;
+    }
+  }
+  @media(max-width: 991px){
+    ul {
+      display: none;
+      float: left;
+      clear: both;
+      text-align: left;
+      border-top: 1px solid $grey-color;
+      border-right: 1px solid $grey-color;
+      padding-left: 20px;
+      padding-right: 20px;
+      li {
+        display: block;
+      }
+
+      li.spacer {
+        display: none;
+      }
+    }
+    .expand-button {
+      display: block;
     }
   }
   #rsvp {

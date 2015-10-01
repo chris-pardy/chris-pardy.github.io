@@ -40,7 +40,10 @@ sections:
 <header>
 	<nav class="navbar-fixed-top collapse">
 		<div class="container-fluid">
-			<ul class="row">
+			<div class="expand-button btn" onclick="$('nav ul').toggle();">
+				<span class="fa fa-bars fa-3x"></span>
+			</div>
+			<ul>
 				{% for item in page.sections %}
 					<li><a href="#{{ item.id }}">{{ item.name }}</a></li>
 					{% if forloop.last %}
