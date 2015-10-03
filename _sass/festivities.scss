@@ -11,7 +11,19 @@
       background-size: 15px;
     }
   }
+  .control:hover{
+    font-weight: bold;
+    color: rgb(81, 99, 111);
+    h4 {
+      font-weight: bold;
+      color: rgb(81, 99, 111);
+    }
+  }
   .control.active {
+    font-weight: bold;
+    h4 {
+      font-weight: bold;
+    }
     .indicator {
       background-image: url('/images/indicator_active.png');
     }
@@ -21,7 +33,7 @@
   .carousel-inner {
     border: 2px solid white;
     border-radius: 5px;
-    height: 300px; 
+    height: 400px; 
     overflow: hidden;
   }
 }
@@ -39,7 +51,7 @@
     border-right: 1px solid white;
   }
   img {
-    height: 296px;
+    height: 396px;
   }
   .festive-content-outer {
     margin-top: 35px;
@@ -47,7 +59,7 @@
   }
   .festive-content-inner {
     overflow-y: scroll;
-    height: 226px;
+    height: 326px;
     margin: 0px 35px 0px 10px;
     border-left: 1px solid white;
     .col-xs-7 {
