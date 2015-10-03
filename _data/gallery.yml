@@ -38,12 +38,12 @@
   thumb: /images/gallery/thumbs/RINO4611.jpg
   offset: 50
 
-- src: /images/gallery/RINO4730.jpg
-  orient: hor
-  thumb: /images/gallery/thumbs/RINO4730.jpg
-  offset: 100
-
 - src: /images/gallery/RINO4700.jpg
   orient: hor
   thumb: /images/gallery/thumbs/RINO4700.jpg
   offset: 50
+
+- src: /images/gallery/IMG_6414.jpg
+  orient: hor
+  thumb: /images/gallery/thumbs/IMG_6414.jpg
+  offset: 0

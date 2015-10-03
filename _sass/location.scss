@@ -47,5 +47,9 @@
     		border-top-left-radius: 5px;
     		border-top-right-radius: 5px;
     	}
+    	a {
+    		color: $grey-color;
+    		text-decoration: underline;
+    	}
 	}
 }
