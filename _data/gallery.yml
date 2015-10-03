@@ -1,79 +1,49 @@
-- src: /images/gallery/1.jpg
+- src: /images/gallery/IMG_6415.jpg
   orient: hor
-  offset: 10
-  caption: Vinyard
+  thumb: /images/gallery/thumbs/IMG_6415.jpg
+  offset: 100
 
-- src: /images/gallery/2.jpg
-  orient: ver
-  caption: Rome
-
-- src: /images/gallery/3.jpg
+- src: /images/gallery/IMG_6433.jpg
   orient: hor
-  offset: 30
-  caption: Largo di Garda
-
-- src: /images/gallery/4.jpg
-  orient: ver
+  thumb: /images/gallery/thumbs/IMG_6433.jpg
   offset: 50
-  caption: 
 
-- src: /images/gallery/5.jpg
+- src: /images/gallery/IMG_6442.jpg
   orient: hor
-  caption:
-
-- src: /images/gallery/6.jpg
-  orient: ver
-  offset: 20
-  caption:
-
-- src: /images/gallery/7.jpg
-  orient: hor
-  caption:
-
-- src: /images/gallery/8.jpg
-  orient: hor
-  caption:
-
-- src: /images/gallery/9.jpg
-  orient: ver
-  caption:
-
-- src: /images/gallery/10.jpg
-  orient: hor
-  caption:
-
-- src: /images/gallery/11.jpg
-  orient: hor
-  caption:
-
-- src: /images/gallery/12.jpg
-  orient: hor
+  thumb: /images/gallery/thumbs/IMG_6442.jpg
   offset: 50
-  caption:
 
-- src: /images/gallery/13.jpg
+- src: /images/gallery/RINO4766.jpg
   orient: hor
+  thumb: /images/gallery/thumbs/RINO4766.jpg
   offset: 50
-  caption:
 
-- src: /images/gallery/14.jpg
+- src: /images/gallery/IMG_6489.jpg
   orient: hor
-  caption:
+  thumb: /images/gallery/thumbs/IMG_6489.jpg
+  offset: 100
 
-- src: /images/gallery/15.jpg
-  orient: ver
-  caption:
-
-- src: /images/gallery/16.jpg
+- src: /images/gallery/IMG_6508.jpg
   orient: hor
-  offset: 30
-  caption:
+  thumb: /images/gallery/thumbs/IMG_6508.jpg
+  offset: 70
 
-- src: /images/gallery/17.jpg
+- src: /images/gallery/IMG_7931.jpg
   orient: hor
+  thumb: /images/gallery/thumbs/IMG_7931.jpg
   offset: 50
-  caption:
 
-- src: /images/gallery/18.jpg
-  orient: ver
-  caption:
+- src: /images/gallery/RINO4611.jpg
+  orient: hor
+  thumb: /images/gallery/thumbs/RINO4611.jpg
+  offset: 50
+
+- src: /images/gallery/RINO4730.jpg
+  orient: hor
+  thumb: /images/gallery/thumbs/RINO4730.jpg
+  offset: 100
+
+- src: /images/gallery/RINO4700.jpg
+  orient: hor
+  thumb: /images/gallery/thumbs/RINO4700.jpg
+  offset: 50

@@ -24,13 +24,13 @@ sections:
     id: travel
     content: travel.html
     before: travel
-    background: /images/coast.jpg
+    background: /images/colleseum.jpg
   -
     name: Ravello
     id: ravello
     content: location.html
     before: ravello
-    background: /images/positano.jpg
+    background: /images/coast.jpg
   -
     name: Registry
     id: registry
@@ -40,10 +40,10 @@ sections:
 <header>
 	<nav class="navbar-fixed-top collapse">
 		<div class="container-fluid">
-			<div class="expand-button btn" onclick="$('nav ul').toggle();">
+			<div class="expand-button btn" onclick="$('nav ul.hidable').toggleClass('unhide');">
 				<span class="fa fa-bars fa-3x"></span>
 			</div>
-			<ul>
+			<ul class="hidable">
 				{% for item in page.sections %}
 					<li><a href="#{{ item.id }}">{{ item.name }}</a></li>
 					{% if forloop.last %}

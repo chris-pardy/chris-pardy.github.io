@@ -184,10 +184,13 @@ nav {
     ul {
       width: 100%;
     }
+    ul.hidable {
+      display: block;
+      visibility: visible;
+    }
   }
   @media(max-width: 991px){
     ul {
-      display: none;
       float: left;
       clear: both;
       text-align: left;
@@ -202,6 +205,16 @@ nav {
       li.spacer {
         display: none;
       }
+    }
+    ul.hidable {
+      overflow-x: hidden;
+      display: none;
+      width: 0px;
+    }
+    ul.hidable.unhide {
+      display: block;
+      width: inherit;
+      margin-top: -1px;
     }
     .expand-button {
       display: block;
@@ -227,7 +240,7 @@ nav {
     border-left: 1px solid $grey-color;
   }
   .title {
-    background-image: url('/images/orangebg4.jpg');
+    background-image: url('/images/slate_orange.jpg');
     background-size: 400px;
     font-family: 'mr_sheffieldregular', cursive;
     font-size: 1.5em;
@@ -284,11 +297,6 @@ section {
     text-align: center;
     font-size: medium;
   }
-}
-@media(max-width: 991px){
-    .cutin {
-      display: none;
-    }
 }
 
 @import 'about';
