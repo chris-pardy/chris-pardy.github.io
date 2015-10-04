@@ -11,7 +11,7 @@
       background-size: 15px;
     }
   }
-  .control:hover{
+  .control:hover, .control.active{
     font-weight: bold;
     color: rgb(81, 99, 111);
     h4 {
@@ -19,14 +19,8 @@
       color: rgb(81, 99, 111);
     }
   }
-  .control.active {
-    font-weight: bold;
-    h4 {
-      font-weight: bold;
-    }
-    .indicator {
-      background-image: url('/images/indicator_active.png');
-    }
+  .control.active .indicator{
+    background-image: url('/images/indicator_active.png');
   }
 }
 #festive-carousel {
