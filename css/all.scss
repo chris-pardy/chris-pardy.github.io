@@ -40,6 +40,7 @@ footer {
   border-top: 1px solid $grey-color;
   background-color: white;
   color: $grey-color;
+  box-shadow: 0px 0px 15px black;
   .names {
     font-family: 'mr_sheffieldregular', cursive;
     font-size: xx-large;
@@ -297,6 +298,7 @@ section {
   min-height: 5em;
   box-shadow: inset 0px 0px 15px black;
   .quote {
+    font-size: 18px;
     padding: 0;
     background-color: transparent;
     border: 25px solid transparent;
@@ -312,6 +314,9 @@ section {
     hr {
       width: 10%;
       border-color: $grey-color;
+    }
+    .translation {
+      font-style: oblique;
     }
     .author {
       text-align: center;
