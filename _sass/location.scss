@@ -1,12 +1,12 @@
 #ravello {
-	background-image: url('/images/slate_blue.jpg');
-	color: white;
+	background-image: url('/images/geometry.jpg');
+	color: $grey-color;
 	hr {
 		border-color: white;
 	}
 	#location-carousel a.control {
 		text-decoration: none;
-		color: white;
+		color: $grey-color;
 		cursor: pointer;
 	}
 	#location-carousel a.control.active {
@@ -18,8 +18,8 @@
 	.block-col {
 		display: table-cell;
     	vertical-align: top;
-    	padding-left: 5px;
-    	padding-right: 5px;
+    	padding-left: 10px;
+    	padding-right: 10px;
 		float: none;
 	}
 	@media(max-width: 991px){
@@ -28,12 +28,11 @@
 	    }
 	}
 	.block {
-		background-color: white;
-		color: $grey-color;
-		border-radius: 5px;
+		background-color: $grey-color;
+		color: white;
 		margin-top: 5px;
-		margin-bottom: 0px;
-		padding-top: 10px;
+		margin-bottom: 5px;
+		padding-top: 20px;
     	width: 100%;
     	height: 100%;
     	display: inline-block;
@@ -43,12 +42,10 @@
     	}
     	.image-top {
     		width: 100%;
-    		margin-top: -10px;
-    		border-top-left-radius: 5px;
-    		border-top-right-radius: 5px;
+    		margin-top: -20px;
     	}
     	a {
-    		color: $grey-color;
+    		color: white;
     		text-decoration: underline;
     	}
 	}

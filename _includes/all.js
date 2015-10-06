@@ -183,7 +183,7 @@ $(document).ready(function(){
             var w = $('#gallery ul').width();
             var images = Math.floor(w / 200);
             var imgWidth = w / images;
-            var rows = Math.ceil($('#gallery li').css({
+            var rows = Math.floor($('#gallery li').css({
                 width: imgWidth,
                 height: imgWidth
             }).length / images);

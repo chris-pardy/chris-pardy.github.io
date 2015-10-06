@@ -15,7 +15,7 @@
 body {
   position: relative;
   font-family: 'Josefin Slab', serif;
-  font-size: 1.8em;
+  font-size: 2em;
   background-image: url('/images/slate_blue.jpg');
   color: white;
   overflow-x: hidden;
@@ -26,8 +26,8 @@ footer {
   padding-bottom: 1em;
   font-size: large;
   border-top: 1px solid $grey-color;
-  background-image: url('/images/slate_blue.jpg');
-  color: white;
+  background-color: white;
+  color: $grey-color;
   .names {
     font-family: 'mr_sheffieldregular', cursive;
     font-size: xx-large;
@@ -36,7 +36,7 @@ footer {
   .credit {
     font-size: small;
     a {
-      color: white;
+      color: $grey-color;
       text-decoration: underline;
     }
   }
