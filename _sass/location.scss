@@ -2,7 +2,7 @@
 	background-image: url('/images/geometry.jpg');
 	color: $grey-color;
 	hr {
-		border-color: white;
+		border-color: $grey-color;
 	}
 	#location-carousel a.control {
 		text-decoration: none;
@@ -36,6 +36,7 @@
     	width: 100%;
     	height: 100%;
     	display: inline-block;
+    	box-shadow: 0px 1px 10px black;
     	p {
     		margin-left: 10px;
     		margin-right: 10px;

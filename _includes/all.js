@@ -5,6 +5,7 @@ $(document).ready(function(){
     var dontAnimate = false; //used to stop navspy animations when scrolling to a section
     //Scroll to anchors, replaces anchor link behavior
 	$('[data-scroll-to], nav li a').click(function(e){
+        $(this).parents('ul').removeClass('unhide');
 		var target = $(this).data('scroll-to') || $(this).attr('href');
         if (target){
             dontAnimate = true;

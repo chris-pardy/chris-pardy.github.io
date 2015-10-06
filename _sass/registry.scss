@@ -1,8 +1,14 @@
 #registry {
-	background-image: url('/images/slate_blue.jpg');
-	background-position: top;
-  	color: white;
+	background-image: url('/images/registry_color.jpg');
+	background-position: bottom center;
+	box-shadow: inset 0px 0px 15px black;
+  	color: $grey-color;
+  	min-height: 1300px;
+  	padding-top: 2em;
+  	h1 {
+  		text-align: left;
+  	}
   	hr {
-		border-color: white;
+		border-color: $grey-color;
 	}
 }
