@@ -325,7 +325,7 @@ section {
   h1 {
     font-family: 'Josefin Slab', serif;
     text-align: center;
-    font-size: medium;
+    font-size: 18px;
   }
 }
 
@@ -338,6 +338,8 @@ section {
 @import 'festivities';
 
 @import 'travel';
+
+@import 'stay';
 
 @import 'location';
 

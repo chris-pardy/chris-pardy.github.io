@@ -97,3 +97,123 @@
   orient: hor
   thumb: /images/gallery/thumbs/21.jpg
   offset: 50
+
+- src: /images/gallery/22.jpg
+  orient: hor
+  thumb: /images/gallery/thumbs/22.jpg
+  offset: 50
+
+- src: /images/gallery/23.jpg
+  orient: hor
+  thumb: /images/gallery/thumbs/23.jpg
+  offset: 50
+
+- src: /images/gallery/32.jpg
+  orient: hor
+  thumb: /images/gallery/thumbs/32.jpg
+  offset: 50
+
+- src: /images/gallery/26.jpg
+  orient: hor
+  thumb: /images/gallery/thumbs/26.jpg
+  offset: 50
+
+- src: /images/gallery/27.jpg
+  orient: hor
+  thumb: /images/gallery/thumbs/27.jpg
+  offset: 50
+
+- src: /images/gallery/28.jpg
+  orient: hor
+  thumb: /images/gallery/thumbs/28.jpg
+  offset: 50
+
+- src: /images/gallery/29.jpg
+  orient: hor
+  thumb: /images/gallery/thumbs/29.jpg
+  offset: 50
+
+- src: /images/gallery/30.jpg
+  orient: hor
+  thumb: /images/gallery/thumbs/30.jpg
+  offset: 50
+
+- src: /images/gallery/31.jpg
+  orient: hor
+  thumb: /images/gallery/thumbs/31.jpg
+  offset: 50
+
+- src: /images/gallery/25.jpg
+  orient: hor
+  thumb: /images/gallery/thumbs/25.jpg
+  offset: 50
+
+- src: /images/gallery/34.jpg
+  orient: hor
+  thumb: /images/gallery/thumbs/34.jpg
+  offset: 50
+
+- src: /images/gallery/35.jpg
+  orient: hor
+  thumb: /images/gallery/thumbs/35.jpg
+  offset: 50
+
+- src: /images/gallery/36.jpg
+  orient: hor
+  thumb: /images/gallery/thumbs/36.jpg
+  offset: 50
+
+- src: /images/gallery/37.jpg
+  orient: hor
+  thumb: /images/gallery/thumbs/37.jpg
+  offset: 50
+
+- src: /images/gallery/38.jpg
+  orient: hor
+  thumb: /images/gallery/thumbs/38.jpg
+  offset: 50
+
+- src: /images/gallery/39.jpg
+  orient: hor
+  thumb: /images/gallery/thumbs/39.jpg
+  offset: 50
+
+- src: /images/gallery/40.jpg
+  orient: hor
+  thumb: /images/gallery/thumbs/40.jpg
+  offset: 50
+
+- src: /images/gallery/41.jpg
+  orient: hor
+  thumb: /images/gallery/thumbs/41.jpg
+  offset: 50
+
+- src: /images/gallery/42.jpg
+  orient: hor
+  thumb: /images/gallery/thumbs/42.jpg
+  offset: 50
+
+- src: /images/gallery/43.jpg
+  orient: hor
+  thumb: /images/gallery/thumbs/43.jpg
+  offset: 50
+
+- src: /images/gallery/44.jpg
+  orient: hor
+  thumb: /images/gallery/thumbs/44.jpg
+  offset: 50
+
+- src: /images/gallery/45.jpg
+  orient: hor
+  thumb: /images/gallery/thumbs/45.jpg
+  offset: 50
+
+- src: /images/gallery/46.jpg
+  orient: hor
+  thumb: /images/gallery/thumbs/46.jpg
+  offset: 50
+
+- src: /images/gallery/47.jpg
+  orient: hor
+  thumb: /images/gallery/thumbs/47.jpg
+  offset: 50

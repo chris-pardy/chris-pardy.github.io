@@ -1,0 +1,18 @@
+#stay {
+	.info {
+		margin-bottom: 2em;
+	}
+	a {
+		text-decoration: underline;
+		color: white;
+	}
+	h2 {
+		color: $dark-grey;
+	}
+	@media (min-width: 992px) {
+		.middle {
+			margin-left: 4.16666666%;
+			margin-right: 4.16666666%;
+		}
+	}
+}
