@@ -128,27 +128,24 @@ $(document).ready(function(){
                     var topOffset = $(elem).offset().top - gallery.offset().top;
                     var rightOffset = gallery.width() - (leftOffset + $(elem).width());
                     var bottomOffset = gallery.height() - (topOffset + $(elem).height());
-                    if ($(elem).hasClass('hor')){
-                        t.width = $(elem).children('img').width();
-                        var left = (t.width - $(elem).width())/2;
-                        if (left > rightOffset){
-                            left += left - rightOffset;
-                        }
-                        left = Math.min(left,leftOffset);
-                        t.marginLeft = -1*left;
-                    } else {
-                        t.height = $(elem).children('img').height();
-                        var top = (t.height - $(elem).height())/2;
-                        if (top > bottomOffset){
-                            top += top - bottomOffset;
-                        }
-                        top = Math.min(top,topOffset);
-                        t.marginTop = -1*top;
+                    t.width = $(elem).children('img').width() * 1.05;
+                    t.height = $(elem).children('img').height() * 1.05;
+                    var left = (t.width - $(elem).width())/2;
+                    if (left > rightOffset){
+                        left += left - rightOffset;
                     }
-                    $(elem).css('z-index',255).animate(t);
+                    left = Math.min(left,leftOffset);
+                    t.marginLeft = -1*left;
+                    var top = (t.height - $(elem).height())/2;
+                    if (top > bottomOffset){
+                        top += top - bottomOffset;
+                    }
+                    top = Math.min(top,topOffset);
+                    t.marginTop = -1*top;
+                    $(elem).addClass('active').css('z-index',255).animate(t);
                     $(elem).children('img').addClass('active').animate({
                         marginLeft: 0,
-                        marginTop: 0
+                        marginTop: 0,
                     });
                 }
             };
@@ -166,7 +163,7 @@ $(document).ready(function(){
                         $(this).removeAttr('style');
                     }
                 });
-                var offset = $(this).children('img').removeClass('active').data('offset');
+                var offset = $(this).removeClass('active').children('img').removeClass('active').data('offset');
                 if (offset){
                     if ($(this).hasClass('hor')){
                         $(this).children('img').animate({
