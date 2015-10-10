@@ -1,6 +1,12 @@
 #travel {
 	background-image: url('/images/geometry.jpg');
 	color: $grey-color;
+	.vert-col {
+		display: inline-block;
+		float: none;
+		vertical-align: middle;
+		margin-left: -4px;
+	}
 	hr {
 		border-color: $grey-color;
 	}
