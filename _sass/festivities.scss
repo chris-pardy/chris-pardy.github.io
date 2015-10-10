@@ -24,11 +24,38 @@
   }
 }
 #festive-carousel {
+  .small-control{
+    margin-bottom: 0px;
+    padding-left: 0px;
+    margin-left: 0px;
+    .control {
+      border-left: 2px solid white;
+      border-right: 2px solid white;
+      border-top: 2px solid white;
+      padding: 4px;
+      margin: 0;
+      display: inline;
+      float: left;
+      background-color: $grey-color;
+      .fa-circle-o {
+        line-height: .8;
+        margin: 0 0 0 -0.7em;
+        padding: 0;
+      }
+    }
+    .control.active {
+      background-color: white;
+      color: $grey-color;
+    }
+  }
   .carousel-inner {
     border: 2px solid white;
-    border-radius: 5px;
-    height: 450px; 
-    overflow: hidden;
+  }
+  @media(min-width: 768px){
+    .carousel-inner {
+      height: 450px;
+      overflow: hidden;
+    }
   }
 }
 .festive-content {
@@ -53,7 +80,6 @@
   }
   .festive-content-inner {
     overflow-y: scroll;
-    height: 376px;
     margin: 0px 35px 0px 10px;
     border-left: 1px solid white;
     .col-xs-7 {
@@ -69,6 +95,7 @@
     }
   }
   .festive-time {
+    margin-top: 1em;
     time, p {
       display: block;
       font-size: 16px;
@@ -77,6 +104,14 @@
     p {
       margin-bottom: 0;
       padding-bottom: 0;
+    }
+  }
+  @media(min-width: 768px){
+    .festive-content-inner {
+      height: 376px;
+    }
+    .festive-time {
+      margin-top: 0px;
     }
   }
 }

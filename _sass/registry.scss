@@ -1,8 +1,8 @@
 #registry {
 	background-image: url('/images/backgrounds/road_leave.jpg');
 	background-position: bottom center;
-	background-size:   cover;
-  background-repeat: no-repeat;
+	background-size: cover;
+  	background-repeat: no-repeat;
 	color: $grey-color;
 	min-height: 1300px;
 	padding-top: 2em;
@@ -10,6 +10,10 @@
 		text-align: left;
 	}
 	hr {
-    border-color: $grey-color;
+    	border-color: $grey-color;
+	}
+	p {
+		color: $dark-grey;
+		background-color: rgba(255,255,255,0.6);
 	}
 }

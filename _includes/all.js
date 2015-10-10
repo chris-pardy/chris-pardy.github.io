@@ -5,14 +5,15 @@ $(document).ready(function(){
     var dontAnimate = false; //used to stop navspy animations when scrolling to a section
     //Scroll to anchors, replaces anchor link behavior
 	$('[data-scroll-to], nav li a').click(function(e){
-        $(this).parents('ul').removeClass('unhide');
+        $(this).parents('nav').find('.hidable').removeClass('unhide');
 		var target = $(this).data('scroll-to') || $(this).attr('href');
         if (target){
             dontAnimate = true;
+            var top = $(target).offset().top;
     		$('html, body').animate({
-    			scrollTop: $(target).offset().top - 22
+    			scrollTop: top - 22
     		}, {
-                duration: 1000,
+                duration: 1500,
                 always: function(){
                     dontAnimate = false;
                 }
@@ -26,12 +27,14 @@ $(document).ready(function(){
 	});
     //Show and hide the navigation bar after a set height
 	var toggleNav = function(){
-		var s = $(window).scrollTop();
-		if (s > 600){
-			$('nav').collapse('show');
-		} else if (s < 400) {
-			$('nav').collapse('hide');
-		}
+        if ($(window).width() > 991){
+    		var s = $(window).scrollTop();
+    		if (s > 600){
+    			$('nav').collapse('show');
+    		} else if (s < 400) {
+    			$('nav').collapse('hide');
+    		}
+        }
 	};
     //animate a navigation link to indicate location
     var animateNav = function(target) {
@@ -181,10 +184,10 @@ $(document).ready(function(){
             var w = $('#gallery ul').width();
             var images = Math.floor(w / 200);
             var imgWidth = w / images;
-            var rows = Math.floor($('#gallery li').css({
+            var rows = Math.min(Math.floor($('#gallery li').css({
                 width: imgWidth,
                 height: imgWidth
-            }).length / images);
+            }).length / images),6);
             $('#gallery ul').css({
                 height: rows * imgWidth
             });
@@ -193,9 +196,7 @@ $(document).ready(function(){
                 width: imgWidth
             };
         };
-        $(window).resize(function(){
-            fixImageSizes();
-        });
+        $(window).resize(fixImageSizes);
         fixImageSizes();
     }();
     /*================================
@@ -205,16 +206,5 @@ $(document).ready(function(){
 		$(this).find('.carousel-image, .control').removeClass('active');
 		$(this).find('[data-slide-to='+$(e.relatedTarget).index()+']').addClass('active');
 	});
-
-    $('#toggle-map').change(function(){
-        if (this.checked){
-            $('#location-map').css('z-index','10');
-        }
-    });
-    $('#toggle-info').change(function(){
-        if (this.checked){
-            $('#location-map').css('z-index','0');
-        }
-    })
 });
 

@@ -45,21 +45,20 @@ sections:
     background: /images/backgrounds/night_boats.jpg
 ---
 <img id="stamp" src="/images/stamp.png" />
-<header>
+<header class="container-fluid">
 	<nav class="navbar-fixed-top collapse">
-		<div class="container-fluid">
-			<ul class="hidable">
-				{% for item in page.sections %}
-					<li><a href="#{{ item.id }}">{{ item.name }}</a></li>
-					{% if forloop.last %}
-					{% else %}
-					<li class="spacer">&middot;</li>
-					{% endif %}
-				{% endfor %}
-			</ul>
-			<div class="expand-button btn" onclick="$('nav ul.hidable').toggleClass('unhide');">
-				<span class="fa fa-bars fa-3x"></span>
-			</div>
+		<ul class="hidable">
+			{% for item in page.sections %}
+				<li><a href="#{{ item.id }}">{{ item.name }}</a></li>
+				{% if forloop.last %}
+				{% else %}
+				<li class="spacer">&middot;</li>
+				{% endif %}
+			{% endfor %}
+		</ul>
+		<div class="cover hidable" onmousedown="$('nav .hidable').removeClass('unhide')"></div>
+		<div class="expand-button btn" onclick="$('nav .hidable').toggleClass('unhide');">
+			<span class="fa fa-bars fa-3x"></span>
 		</div>
 	</nav>
 </header>
@@ -76,9 +75,9 @@ sections:
 {% endfor %}
 <footer class="container-fluid">
 	<div class="row text-center" style="padding-top: .5em;">
-		<span class="col-xs-4 col-xs-offset-4">A <span class="names">Gabriella & Chris</span> Production</span>
+		<span class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">A <span class="names">Gabriella & Chris</span> Production</span>
 	</div>
 	<div class="row text-center">
-		<span class="col-xs-4 col-xs-offset-4 credit">Photography by <a target="_blank" href="http://www.rinocordella.com/">Rino Cordella</a></span>
+		<span class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 credit">Photography by <a target="_blank" href="http://www.rinocordella.com/">Rino Cordella</a></span>
 	</div>
 </footer>

@@ -93,3 +93,23 @@
     padding-top: .7em;
   }
 }
+
+#stamp {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  z-index: 255;
+  opacity: .8;
+}
+@media(max-width: 991px){
+  #stamp{
+    top: 0px;
+    left: 0px;
+  }
+}
+@media(max-width: 767px){
+  #stamp {
+    top: -50px;
+    left: -50px;
+  }
+}
