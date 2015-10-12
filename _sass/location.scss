@@ -1,6 +1,7 @@
 #ravello {
 	background-image: url('/images/geometry.jpg');
 	color: $grey-color;
+    height: 390em;
 	hr {
 		border-color: $grey-color;
 	}
@@ -17,16 +18,11 @@
 		display: table;
 	}
 	.block-col {
-		display: table-cell;
+		display: block;
     	vertical-align: top;
     	padding-left: 10px;
     	padding-right: 10px;
 		float: none;
-	}
-	@media(max-width: 991px){
-	    .block-col {
-	      display: block;
-	    }
 	}
 	p {
 		font-size: 18px;
@@ -45,6 +41,10 @@
     		margin-left: 10px;
     		margin-right: 10px;
     	}
+        h4 {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
     	p {
     		margin-left: 10px;
     		margin-right: 10px;
@@ -65,7 +65,7 @@
     		margin-bottom: 1.5em;
     		margin-top: 0.5em;
     		font-size: medium;
-    		address, .price {
+    		address, .price, .hours {
     			margin: 0;
     			color: $dark-grey;
     		}
@@ -79,4 +79,12 @@
     		text-decoration: underline;
     	}
 	}
+}
+@media(min-width: 992px){
+    #ravello {
+        height: 150em;
+        .block-col {
+          display: table-cell;
+        }
+    }
 }
