@@ -20,6 +20,12 @@ $(document).ready(function(){
             });
             var navItem = $('nav li a[href='+target+']');
             animateNav(navItem);
+            ga('send', {
+                hitType: 'event',
+                eventCategory: 'nav',
+                eventAction: 'click',
+                eventLabel: target
+            });
     		e.stopImmediatePropagation();
     		return true;
         }
@@ -57,6 +63,12 @@ $(document).ready(function(){
                     $(this).css({borderBottomWidth:1});
                 }
             }).addClass('active');
+            ga('send', {
+                hitType: 'event',
+                eventCategory: 'sectionView',
+                eventAction: 'view',
+                eventLabel: $(target).attr('href')
+            });
         }
     };
     //update navigation links to show current secion
@@ -206,5 +218,40 @@ $(document).ready(function(){
 		$(this).find('.carousel-image, .control').removeClass('active');
 		$(this).find('[data-slide-to='+$(e.relatedTarget).index()+']').addClass('active');
 	});
+    /*===============================
+    Google analytics events
+    ===============================*/
+    +function(){
+        //carousel controls
+        $('.carousel .control').click(function(){
+            ga('send',{
+                hitType: 'event',
+                eventCategory: $(this).data('target'),
+                eventAction: 'view',
+                eventLabel: $(this).data('slide-to')
+            });
+            return true;
+        });
+        //offsite links
+        $('a[target=_blank]').click(function(){
+            ga('send',{
+                hitType: 'event',
+                eventCategory: 'link',
+                eventAction: 'open',
+                eventLabel: $(this).attr('href')
+            });
+            return true;
+        });
+        //gallery click
+        $('#gallery a.image').click(function(){
+            ga('send', {
+                hitType: 'event',
+                eventCategory: 'gallery',
+                eventAction: 'click',
+                eventLabel: $(this).attr('href')
+            });
+            return true;
+        });
+    }();
 });
 

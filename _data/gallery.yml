@@ -1,6 +1,6 @@
-- src: /images/gallery/1.jpg
+- src: /images/gallery/45.jpg
   orient: hor
-  thumb: /images/gallery/thumbs/1.jpg
+  thumb: /images/gallery/thumbs/45.jpg
   offset: 50
 
 - src: /images/gallery/14.jpg
@@ -18,9 +18,9 @@
   thumb: /images/gallery/thumbs/4.jpg
   offset: 50
 
-- src: /images/gallery/5.jpg
+- src: /images/gallery/41.jpg
   orient: hor
-  thumb: /images/gallery/thumbs/5.jpg
+  thumb: /images/gallery/thumbs/41.jpg
   offset: 50
 
 - src: /images/gallery/9.jpg
@@ -183,9 +183,9 @@
   thumb: /images/gallery/thumbs/42.jpg
   offset: 50
 
-- src: /images/gallery/45.jpg
+- src: /images/gallery/1.jpg
   orient: hor
-  thumb: /images/gallery/thumbs/45.jpg
+  thumb: /images/gallery/thumbs/1.jpg
   offset: 50
 
 - src: /images/gallery/43.jpg
@@ -193,9 +193,9 @@
   thumb: /images/gallery/thumbs/43.jpg
   offset: 50
 
-- src: /images/gallery/41.jpg
+- src: /images/gallery/5.jpg
   orient: hor
-  thumb: /images/gallery/thumbs/41.jpg
+  thumb: /images/gallery/thumbs/5.jpg
   offset: 50
 
 - src: /images/gallery/44.jpg
