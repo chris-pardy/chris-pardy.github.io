@@ -44,7 +44,9 @@ nav {
   .expand-button {
     display: none;
     background-color: white;
-    float: left;
+    position: fixed;
+    top: 0px;
+    left: 0px;
     border-bottom: 1px solid $grey-color;
     border-right: 1px solid $grey-color;
     padding: 5px 10px 5px 10px;
@@ -61,19 +63,18 @@ nav {
   }
   @media(max-width: 991px){
     ul {
-      float: left;
-      clear: both;
       text-align: left;
-      position: absolute;
+      position: fixed;
       top: 0px;
       left: 0px;
-      height: 100vh;
+      height: 120vh;
       overflow-y: scroll;
       touch-action:none;
       border-bottom: none;
       border-right: 1px solid $grey-color;
       padding-left: 20px;
       padding-right: 20px;
+      padding-top: 32px;
       li {
         display: block;
       }
@@ -99,7 +100,7 @@ nav {
       left: 0;
       top: 0;
       width: 100vw;
-      height: 100vh;
+      height: 120vh;
       background-color: rgba(0,0,0,0.4);
       z-index: -1;
       touch-action: none;

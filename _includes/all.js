@@ -22,9 +22,9 @@ $(document).ready(function(){
             animateNav(navItem);
             ga('send', {
                 hitType: 'event',
-                eventCategory: 'nav',
+                eventCategory: target.substr(1),
                 eventAction: 'click',
-                eventLabel: target
+                eventLabel: 'nav'
             });
     		e.stopImmediatePropagation();
     		return true;
@@ -65,9 +65,8 @@ $(document).ready(function(){
             }).addClass('active');
             ga('send', {
                 hitType: 'event',
-                eventCategory: 'sectionView',
-                eventAction: 'view',
-                eventLabel: $(target).attr('href')
+                eventCategory: $(target).attr('href').substr(1),
+                eventAction: 'view'
             });
         }
     };
@@ -222,36 +221,23 @@ $(document).ready(function(){
     Google analytics events
     ===============================*/
     +function(){
-        //carousel controls
-        $('.carousel .control').click(function(){
-            ga('send',{
+        $('[data-track-event]').each(function(){
+            var t = $(this);
+            var edata = {
                 hitType: 'event',
-                eventCategory: $(this).data('target'),
-                eventAction: 'view',
-                eventLabel: $(this).data('slide-to')
+                eventAction: t.data('track-event'),
+                eventCategory: t.data('track-category') || t.parents('section').attr('id'),
+            }
+            var eventLabel = t.data('track-label');
+            if (eventLabel){
+                edata.eventLabel = eventLabel;
+            }
+            //assume click
+            $(this).click(function(){
+                ga('send',edata);
+                return true;
             });
-            return true;
-        });
-        //offsite links
-        $('a[target=_blank]').click(function(){
-            ga('send',{
-                hitType: 'event',
-                eventCategory: 'link',
-                eventAction: 'open',
-                eventLabel: $(this).attr('href')
-            });
-            return true;
-        });
-        //gallery click
-        $('#gallery a.image').click(function(){
-            ga('send', {
-                hitType: 'event',
-                eventCategory: 'gallery',
-                eventAction: 'click',
-                eventLabel: $(this).attr('href')
-            });
-            return true;
-        });
+        })
     }();
 });
 
