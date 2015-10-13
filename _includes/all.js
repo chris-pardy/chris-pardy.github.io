@@ -71,31 +71,63 @@ $(document).ready(function(){
         }
     };
     //update navigation links to show current secion
-    var navSpy = function(){
-        var windowTop = $(window).scrollTop();
-        if (dontAnimate){
-            return;
-        }
-        var windowBottom = windowTop + $(window).height();
-        var t;
-        var p = 0;
+    +function(){
+        var targets = [];
         $('nav a[href^="#"]').each(function(){
-            var target = $(this).attr('href');
-            var top = $(target).offset().top;
-            var bottom = top + $(target).height();
-            var size = Math.min(windowBottom,bottom) - Math.max(windowTop, top);
-            if (size > p) {
-                t = this;
-                p = size;
+            var target = {
+                navElem: this,
+                section: $($(this).attr('href'))
+            };
+            target.top = function(){
+                if (target._top){
+                    return target._top;
+                }
+                target._top = target.section.offset().top;
+                return target._top;
+            };
+            target.height = function(){
+                if (target._height){
+                    return target._height
+                }
+                target._height = target.section.height();
+                return target._height;
+            };
+            target.resized = function(){
+                target._top = null;
+                target._height = null;
+            };
+            targets.push(target);
+        });
+        var w = $(window);
+        var windowHeight = w.height();
+        w.scroll(function(){
+            if (dontAnimate){
+                return;
+            }
+            var windowTop = w.scrollTop();
+            var windowBottom = windowTop + windowHeight;
+            var t;
+            var p = 0;
+            for (var i = 0; i < targets.length; i++){
+                var target = targets[i];
+                var top = target.top();
+                var bottom = top + target.height();
+                var size = Math.min(windowBottom, bottom) - Math.max(windowTop, top);
+                if (size > p) {
+                    t = target.navElem;
+                    p = size;
+                }
+            }
+            animateNav(t);
+        }).resize(function(){
+            windowHeight = w.height();
+            for (var i = 0; i < targets.length; i++){
+                targets[i].resized();
             }
         });
-        animateNav(t);
-    };
+    }();
     //navigation scroll handlers
-	$(window).scroll(function(){
-		toggleNav();
-        navSpy();
-	});
+	$(window).scroll(toggleNav);
     /*==============================
     Days to Go countdown
     ==============================*/
@@ -220,24 +252,22 @@ $(document).ready(function(){
     /*===============================
     Google analytics events
     ===============================*/
-    +function(){
-        $('[data-track-event]').each(function(){
-            var t = $(this);
-            var edata = {
-                hitType: 'event',
-                eventAction: t.data('track-event'),
-                eventCategory: t.data('track-category') || t.parents('section').attr('id'),
-            }
-            var eventLabel = t.data('track-label');
-            if (eventLabel){
-                edata.eventLabel = eventLabel;
-            }
-            //assume click
-            $(this).click(function(){
-                ga('send',edata);
-                return true;
-            });
-        })
-    }();
+    $('[data-track-event]').each(function(){
+        var t = $(this);
+        var edata = {
+            hitType: 'event',
+            eventAction: t.data('track-event'),
+            eventCategory: t.data('track-category') || t.parents('section').attr('id'),
+        }
+        var eventLabel = t.data('track-label');
+        if (eventLabel){
+            edata.eventLabel = eventLabel;
+        }
+        //assume click
+        $(this).click(function(){
+            ga('send',edata);
+            return true;
+        });
+    });
 });
 
