@@ -5,13 +5,15 @@
   height: 100vh;
   padding-top: 15vh;
   h1 {
+    animation-fill-mode: backwards;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-name: fadein;
     em {
       font-size: 1.5em;
     }
     font-size: 5em;
-  }
-  hr {
-    display: inline-block;
   }
   .text {
     font-size: 2em;
@@ -29,7 +31,12 @@
     display: block;
     text-align: center;
     overflow: hidden;
-    white-space: nowrap; 
+    white-space: nowrap;
+    animation-fill-mode: backwards;
+    animation-delay: 3s;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-name: fadein; 
   }
 
   .strike > .text {
@@ -60,6 +67,12 @@
     position: absolute;
     top: 90vh;
     width: 100%;
+    z-index: -1;
+    animation-fill-mode: backwards;
+    animation-delay: 4.4s;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-name: floatup;
   }
   button {
     border:none;
@@ -100,16 +113,73 @@
   left: 50px;
   z-index: 255;
   opacity: .8;
+  animation-fill-mode: backwards;
+  animation-delay: 5s;
+  animation-duration: 0.3s;
+  animation-name: stamp-in;
 }
+
 @media(max-width: 991px){
   #stamp{
     top: 0px;
     left: 0px;
   }
 }
+
 @media(max-width: 767px){
   #stamp {
     top: -50px;
     left: -50px;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0; 
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes floatup {
+  from {
+    top: 100vh;
+    opacity: 0;
+  }
+
+  1% {
+    opacity: 1;
+  }
+
+  to {
+    top: 90vh;
+  }
+}
+
+@keyframes stamp-in {
+  from {
+    width: 220px;
+    height: 210px;
+    opacity: 0;
+  }
+
+  to {
+    width: 218px;
+    height: 208px;
+    opacity: .8;
+  }
+}
+
+@keyframes fly-down {
+  from {
+    position: fixed;
+    top: -50px;
+  }
+
+  to {
+    top: 0px;
+    position: fixed;
   }
 }
