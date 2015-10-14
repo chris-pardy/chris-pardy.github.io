@@ -4,9 +4,13 @@ $(document).ready(function(){
     =================================*/
     var dontAnimate = false; //used to stop navspy animations when scrolling to a section
     //Scroll to anchors, replaces anchor link behavior
-	$('[data-scroll-to], nav li a').click(function(e){
+    $('nav li a').each(function(){
+        var t = $(this);
+        t.attr('data-scroll-to',t.attr('href')).removeAttr('href');
+    });
+	$('[data-scroll-to]').click(function(){
         $(this).parents('nav').find('.hidable').removeClass('unhide');
-		var target = $(this).data('scroll-to') || $(this).attr('href');
+		var target = $(this).data('scroll-to');
         if (target){
             dontAnimate = true;
             var top = $(target).offset().top;
@@ -18,37 +22,42 @@ $(document).ready(function(){
                     dontAnimate = false;
                 }
             });
-            var navItem = $('nav li a[href='+target+']');
-            animateNav(navItem);
+            var navItem = $('nav li a[data-scroll-to='+target+']');
+            animateNav(navItem, 1500);
             ga('send', {
                 hitType: 'event',
                 eventCategory: target.substr(1),
                 eventAction: 'click',
                 eventLabel: 'nav'
             });
-    		e.stopImmediatePropagation();
-    		return true;
         }
-        return false;
 	});
     //Show and hide the navigation bar after a set height
-	var toggleNav = function(){
-        if ($(window).width() > 991){
-    		var s = $(window).scrollTop();
-    		if (s > 600){
-    			$('nav').collapse('show');
-    		} else if (s < 400) {
-    			$('nav').collapse('hide');
-    		}
-        }
-	};
+    +function(){
+        var w = $(window);
+        var notSmall = w.width() > 991;
+        var nav = $('nav');
+        $(window).scroll(function(){
+            if (notSmall){
+                var s = w.scrollTop();
+                if (s > 600){
+                    nav.collapse('show');
+                } else if (s < 400) {
+                    nav.collapse('hide');
+                }    
+            }
+        }).resize(function(){
+            notSmall = w.width() > 991;
+        });
+    }();
     //animate a navigation link to indicate location
-    var animateNav = function(target) {
+    var animateNav = function(target, duration) {
         if (target && !$(target).hasClass('active')) {
+            duration = duration || 400;
             $('nav li a.active').animate({
                 paddingBottom: 10
             }, {
-                duration: 400,
+                duration: duration,
                 easing: "linear",
                 done: function(){
                     $(this).css({borderBottomWidth:0});
@@ -57,15 +66,19 @@ $(document).ready(function(){
             $(target).animate({
                 paddingBottom: 0
             }, {
-                duration: 400,
+                duration: duration,
                 easing: "linear",
                 start: function(){
                     $(this).css({borderBottomWidth:1});
                 }
             }).addClass('active');
+            var frag = $(target).data('scroll-to');
+            if(history && history.replaceState){
+                history.replaceState({},null,frag);
+            }
             ga('send', {
                 hitType: 'event',
-                eventCategory: $(target).attr('href').substr(1),
+                eventCategory: frag.substr(1),
                 eventAction: 'view'
             });
         }
@@ -73,10 +86,10 @@ $(document).ready(function(){
     //update navigation links to show current secion
     +function(){
         var targets = [];
-        $('nav a[href^="#"]').each(function(){
+        $('nav a[data-scroll-to]').each(function(){
             var target = {
                 navElem: this,
-                section: $($(this).attr('href'))
+                section: $($(this).data('scroll-to'))
             };
             target.top = function(){
                 if (target._top){
@@ -126,8 +139,6 @@ $(document).ready(function(){
             }
         });
     }();
-    //navigation scroll handlers
-	$(window).scroll(toggleNav);
     /*==============================
     Days to Go countdown
     ==============================*/
