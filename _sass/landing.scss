@@ -67,10 +67,9 @@
     position: absolute;
     top: 90vh;
     width: 100%;
-    z-index: -1;
     animation-fill-mode: backwards;
     animation-delay: 4.4s;
-    animation-duration: 1s;
+    animation-duration: 1.5s;
     animation-timing-function: ease-in;
     animation-name: floatup;
   }
@@ -149,7 +148,7 @@
     opacity: 0;
   }
 
-  1% {
+  25% {
     opacity: 1;
   }
 
