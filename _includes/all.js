@@ -230,7 +230,7 @@ $(document).ready(function(){
             var rows = Math.min(Math.floor($('#gallery li').css({
                 width: imgWidth,
                 height: imgWidth
-            }).length / images),6);
+            }).length / images),4);
             $('#gallery ul').css({
                 height: rows * imgWidth
             });
