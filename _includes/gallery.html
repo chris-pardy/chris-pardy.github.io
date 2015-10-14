@@ -1,11 +1,9 @@
-<div class="row">
-	<ul class="col-xs-12 gallery">
-		{% for image in site.data.gallery %}
-		<li>
-			<a class="image {{ image.orient }}" href="{{ image.src }}" data-lightbox="gallery" data-title="{{ image.caption }}" data-track-event="click" data-track-label="{{ image.src }}">
-				<img src="{{ image.thumb }}" data-offset="{{ image.offset }}" style="{% if image.orient == 'hor' %}margin-left:-{{ image.offset }}px;{% else %}margin-top:-{{ image.offset }}px;{% endif %}" />
-			</a>
-		</li>
-		{% endfor %}
-	</ul>
-</div>
+<ul class="col-xs-12 gallery">
+	{% for image in site.data.gallery %}
+	<li>
+		<a class="image {{ image.orient }}" href="{{ image.src }}" data-lightbox="gallery" data-title="{{ image.caption }}" data-track-event="click" data-track-label="{{ image.src }}">
+			<img src="{{ image.thumb }}" data-offset="{{ image.offset }}" style="{% if image.orient == 'hor' %}margin-left:-{{ image.offset }}px;{% else %}margin-top:-{{ image.offset }}px;{% endif %}" />
+		</a>
+	</li>
+	{% endfor %}
+</ul>
