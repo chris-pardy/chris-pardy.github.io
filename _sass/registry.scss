@@ -12,8 +12,20 @@
 	hr {
     	border-color: $grey-color;
 	}
-	p {
+	dd {
+		margin-left: 1em;
+	}
+	.section {
 		color: $dark-grey;
 		background-color: rgba(255,255,255,0.6);
+		a {
+			color: $dark-grey;
+			text-decoration: underline;
+		}
+	}
+	.logo-image {
+		display: inline;
+		height: 1em;
+		margin: 0.3em 1px 0 0;
 	}
 }
