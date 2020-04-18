@@ -44,7 +44,7 @@ $(document).ready(function(){
                     nav.collapse('show');
                 } else if (s < 400) {
                     nav.collapse('hide');
-                }    
+                }
             }
         }).resize(function(){
             notSmall = w.width() > 991;
@@ -140,28 +140,28 @@ $(document).ready(function(){
         });
     }();
     /*==============================
-    Days to Go countdown
+    Days Since countup
     ==============================*/
     +function(){
-        var updateDaysToGo = function(){
+        var updateDaysSince = function(){
             var now = new Date();
             var weddingDay = new Date($('#wedding-date').attr('datetime'));
-            var timeToGo = weddingDay.getTime() - now.getTime();
-            var dtg = Math.floor(timeToGo/86400000);
-            timeToGo = timeToGo % 86400000
-            var htg = Math.floor(timeToGo/3600000);
-            timeToGo = timeToGo % 3600000;
-            var mtg = Math.floor(timeToGo/60000);
-            timeToGo = timeToGo % 60000;
-            var stg = Math.floor(timeToGo/1000);
+            var timeSince = now.getTime() - weddingDay.getTime();
+            var ds = Math.floor(timeSince/86400000);
+            timeSince = timeSince % 86400000
+            var hs = Math.floor(timeSince/3600000);
+            timeSince = timeSince % 3600000;
+            var ms = Math.floor(timeSince/60000);
+            timeSince = timeSince % 60000;
+            var ss = Math.floor(timeSince/1000);
             //1000 ms per sec * 60 sec per min * 60 min per hour * 24 hour per day
-            $('#days-to-go').html(dtg);
-            $('#hours-to-go').html(htg);
-            $('#minutes-to-go').html(mtg);
-            $('#seconds-to-go').html(stg);
-            setTimeout(updateDaysToGo, 1000);
+            $('#days-since').html(ds);
+            $('#hours-since').html(hs);
+            $('#minutes-since').html(ms);
+            $('#seconds-since').html(ss);
+            setTimeout(updateDaysSince, 1000);
         };
-        updateDaysToGo();
+        updateDaysSince();
     }();
     /*============================
     Gallery animations
@@ -281,4 +281,3 @@ $(document).ready(function(){
         });
     });
 });
-
