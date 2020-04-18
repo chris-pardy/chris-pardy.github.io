@@ -36,7 +36,7 @@
     animation-delay: 3s;
     animation-duration: 2s;
     animation-timing-function: ease-in;
-    animation-name: fadein; 
+    animation-name: fadein;
   }
 
   .strike > .text {
@@ -80,7 +80,7 @@
   }
 }
 
-#count-down {
+#count-up {
   text-align: center;
   background-image: url('/images/slate_blue.jpg');
   font-size: 1.6em;
@@ -134,7 +134,7 @@
 
 @keyframes fadein {
   from {
-    opacity: 0; 
+    opacity: 0;
   }
 
   to {
